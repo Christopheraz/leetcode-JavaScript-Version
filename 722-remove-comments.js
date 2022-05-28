@@ -4,10 +4,14 @@
  */
 const removeComments = function (source) {
   const code = source.join('\n')
-  const isBlockStart = (c, i) => c[i] === '/' && c[i + 1] === '*'
-  const isBlockEnd = (c, i) => c[i] === '*' && c[i + 1] === '/'
-  const isLineStart = (c, i) => c[i] === '/' && c[i + 1] === '/'
-  const isNewLine = (c, i) => c[i] === '\n'
+  const isBlockStart = (c, i) => 
+  c[i] === '/' && c[i + 1] === '*'
+  const isBlockEnd = (c, i) => 
+  c[i] === '*' && c[i + 1] === '/'
+  const isLineStart = (c, i) => 
+  c[i] === '/' && c[i + 1] === '/'
+  const isNewLine = (c, i) => 
+  c[i] === '\n'
   let i = 0,
     output = ''
 

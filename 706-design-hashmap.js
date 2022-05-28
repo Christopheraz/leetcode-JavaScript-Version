@@ -21,7 +21,8 @@ MyHashMap.prototype.put = function(key, value) {
  * @return {number}
  */
 MyHashMap.prototype.get = function(key) {
-   return {}.hasOwnProperty.call(this.h, key) ? this.h[key] : -1
+   return {}.hasOwnProperty.call(this.h, key) 
+   ? this.h[key] : -1
 };
 
 /**

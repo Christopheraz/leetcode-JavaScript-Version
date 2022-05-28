@@ -17,15 +17,12 @@ const openLock = function(deadends, target, count = 0) {
   let steps = 0;
   while (q.length > 0) {
     let len = q.length;
-
     for (let j = 0; j < len; j++) {
       let cur = q.shift();
-
       for (let i = 0; i < 4; i++) {
         let slot = parseInt(cur[i]);
         let before = cur.substr(0, i);
         let after = cur.substr(i + 1);
-
         let left = (10 + slot - 1) % 10;
         let leftCode = before + left + after;
         if (!visited.has(leftCode) && !deadSet.has(leftCode)) {
