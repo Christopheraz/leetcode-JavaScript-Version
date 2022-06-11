@@ -27,7 +27,12 @@ const uniquePathsIII = function(grid) {
 }
 
 function bt(grid, x, y, obj) {
-  if (x < 0 || x >= obj.rows || y < 0 || y >= obj.cols || grid[x][y] < 0) return
+  if (x < 0 || 
+    x >= obj.rows || 
+    y < 0 || 
+    y >= obj.cols || 
+    grid[x][y] < 0) 
+    return
   if (x === obj.er && y === obj.ec) {
     if (obj.eNum === 0) obj.res++
     return
